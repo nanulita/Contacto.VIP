@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Librería de íconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Enlace a estilos propios y título -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Camara Web</title>
+
+    <style>
+        /* Asegurar que todo el cuerpo se ajuste al alto completo */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* Contenedor principal */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
+        }
+
+        /* Contenedor de las cámaras */
+        .camaras-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Estilo para cada cámara */
+        .camara {
+            text-align: center;
+        }
+
+        .camara video {
+            width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+
+        /* Cámara propia (ancho mayor para que sea igual al cuadro de usuarios) */
+        .camara-propia {
+            width: 100%;
+            /* Utiliza todo el ancho disponible */
+            max-width: 200px;
+            /* Ancho máximo para que no sea demasiado grande */
+        }
+
+        /* Cámaras de los usuarios */
+        .camara-usuario {
+            width: 35%;
+            /* 3 cámaras en fila */
+        }
+
+        /* Contenedor para chat y usuarios */
+        .chat-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 20px;
+            width: 100%;
+            /* Hace que el contenedor ocupe todo el ancho disponible */
+            height: 70vh;
+            /* Esto hace que el contenedor ocupe el 60% de la altura de la ventana */
+        }
+
+        /* Área de conversación */
+        .chat-box {
+            flex: 1;
+            /* El chat ocupará el espacio central */
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            border: px solid #0c0c0cab;
+            border-radius: 10px;
+            background-color: #faf2f2;
+        }
+
+        .chat-box p {
+            margin: 5px 0;
+            word-wrap: break-word;
+        }
+
+        .chat-box p strong {
+            color: #4CAF50;
+            border: #030303;
+        }
+
+        /* Estilo del área de entrada del mensaje */
+        .input-area {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .input-area input {
+            width: 80%;
+            padding: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 2px solid #0a0a0a;
+        }
+
+        .input-area select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid #0c0c0c;
+            width: 10%;
+        }
+
+        .input-area button {
+            padding: 10px 10px;
+            background-color: #4CAF50;
+            color: rgb(10, 10, 10);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .input-area button:hover {
+            background-color: #415a42;
+        }
+
+        /* Contenedor de usuarios */
+        .users-container {
+            width: 200px;
+            padding: 20px;
+            border: 2px solid #0f0f0f;
+            border-radius: 10px;
+            background-color: #dad0d0;
+            overflow-y: scroll;
+        }
+
+        .users-container h4 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .user {
+            margin: 10px 0;
+            padding: 5px;
+            background-color: #e9e9e9;
+            border-radius: 5px;
+        }
+
+        /* Estilo cuando un usuario está seleccionado */
+        .user.selected {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body id="body">
+
+    <!--N°1 <== HEADER/NAV-->
+    <header id="header">
+        <nav id="nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="bandejadeentrada.html">Bandeja de entrada</a></li>
+                <li><a href="#">Camaras web</a></li>
+                <li><a href="mensajeria.html">Mensajeria</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--N°2 <== MAIN-->
+    <main id="main">
+
+        <!-- Contenedor para las cámaras web -->
+        <div class="camaras-container">
+            <!-- Cámara 1 -->
+            <div class="camara camara-usuario">
+                <h3>Cámara 1</h3>
+                <video src="url-de-camara-usuario-1" controls autoplay></video>
+            </div>
+
+            <!-- Cámara 2 -->
+            <div class="camara camara-usuario">
+                <h3>Cámara 2</h3>
+                <video src="url-de-camara-usuario-2" controls autoplay></video>
+            </div>
+
+            <!-- Cámara 3 -->
+            <div class="camara camara-usuario">
+                <h3>Cámara 3</h3>
+                <video src="url-de-camara-usuario-3" controls autoplay></video>
+            </div>
+
+            <!-- Cámara propia (del usuario) -->
+            <div class="camara camara-propia">
+                <h3>Tu cámara</h3>
+                <video src="url-de-tu-camara" controls autoplay></video>
+            </div>
+        </div>
+
+        <!-- Contenedor para chat y usuarios -->
+        <div class="chat-container">
+            <!-- Área de conversación (chat) -->
+            <div class="chat-box" id="chatBox">
+                <!-- Mensajes de ejemplo -->
+                <p><strong>Usuario1:</strong> ¡Hola a todos!</p>
+                <p><strong>Usuario2:</strong> ¿Cómo están?</p>
+                <p><strong>Usuario3:</strong> ¡Todo bien, gracias!</p>
+            </div>
+
+            <!-- Área de usuarios -->
+            <div class="users-container">
+                <h4>Usuarios Conectados</h4>
+                <div class="user" onclick="selectUser(this)">
+                    <i class="fas fa-video"></i> Usuario1
+                </div>
+                <div class="user" onclick="selectUser(this)">
+                    <i class="fas fa-video"></i> Usuario2
+                </div>
+                <div class="user" onclick="selectUser(this)">
+                    <i class="fas fa-video"></i> Usuario3
+                </div>
+                <div class="user" onclick="selectUser(this)">
+                    <i class="fas fa-video"></i> Usuario4
+                </div>
+                
+                <!-- Agrega más usuarios según sea necesario -->
+            </div>
+        </div>
+
+        <!-- Área para escribir un mensaje -->
+        <div class="input-area">
+            <!-- Selector de color -->
+            <select id="colorSelect">
+                <option value="black">Negro</option>
+                <option value="red">Rojo</option>
+                <option value="blue">Azul</option>
+                <option value="green">Verde</option>
+                <option value="purple">Morado</option>
+            </select>
+
+            <!-- Caja para escribir el mensaje -->
+            <input type="text" id="messageInput" placeholder="Escribe un mensaje..." />
+
+            <!-- Botón de enviar -->
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+
+    </main>
+
+    <!--N°3 <== FOOTER-->
+    <footer id="footer">
+        <section class="footerLogo">
+            <img src="../icons/logo.jpeg" alt="logo">
+        </section>
+        <section class="footerNav">
+            <ul>
+                <!-- poner si es necesario en el footer info -->
+            </ul>
+
+            <article class="footerNav-copy">
+                <h2>Copyright 2024</h2>
+                <h2>Creado por - Daniela Del Rio</h2>
+            </article>
+        </section>
+    </footer>
+
+
+    <script>
+        // Función para enviar el mensaje
+        function sendMessage() {
+            const messageInput = document.getElementById('messageInput');
+            const colorSelect = document.getElementById('colorSelect');
+            const messageText = messageInput.value;
+            const selectedColor = colorSelect.value;
+
+            // Verifica si el campo de texto no está vacío
+            if (messageText.trim() !== '') {
+                // Crear el nuevo mensaje con el color seleccionado
+                const newMessage = document.createElement('p');
+                newMessage.innerHTML = `<strong>Usuario:</strong> <span style="color: ${selectedColor}">${messageText}</span>`;
+                document.getElementById('chatBox').appendChild(newMessage);
+
+                // Desplazar el área de chat hacia abajo para mostrar el nuevo mensaje
+                document.getElementById('chatBox').scrollTop = document.getElementById('chatBox').scrollHeight;
+
+                // Limpiar el campo de texto después de enviar el mensaje
+                messageInput.value = '';
+            }
+        }
+        // Función para seleccionar un usuario
+        function selectUser(userElement) {
+            // Deseleccionar todos los usuarios
+            const users = document.querySelectorAll('.user');
+            users.forEach(user => user.classList.remove('selected'));
+
+            // Seleccionar al usuario clickeado
+            userElement.classList.add('selected');
+
+            // Aquí podrías agregar lógica para enviar un mensaje al usuario seleccionado
+            console.log('Usuario seleccionado: ', userElement.textContent);
+        }
+    </script>
+
+</body>
+
+</html>

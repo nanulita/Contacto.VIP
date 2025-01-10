@@ -1,0 +1,425 @@
+/* RESET STYLES */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    display: flex; 
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-style: italic;
+    color: rgb(201, 189, 189);
+}
+
+/* BODY STYLES */
+
+body {
+    background-color: #7a4545;
+    background-size: cover;  /* Hace que la imagen cubra todo el fondo */
+    background-position: center;  /* Centra la imagen */
+    background-attachment: fixed;
+}
+
+#registerBox {
+    width: 100%;
+    height: auto;
+    max-width: 1400px; 
+    background-color: rgb(43, 85, 97);
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(54, 46, 46, 3);
+    margin-top: 100vh; /* Aumenta el margen superior para separarlo más del header */
+    margin-bottom: 20px;
+    padding: 10px;   
+    margin: 10px auto;
+    color: rgb(168, 184, 184);
+}
+
+/* HEADER STYLES */
+#header {
+    width: 100%;
+    background-size: cover;
+    position: fixed;
+    top: 0; 
+    z-index: 1000; 
+}
+
+header {
+    text-align: center;
+    color: #a32121;
+    height: 50px;
+}
+
+.introHeader{
+    background-color: rgb(8, 8, 8);
+}
+
+.headerLogo {
+    width: 85px;
+    height: auto;
+}
+
+/* NAVIGATION STYLES */
+
+#nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+    background-color: rgb(55, 90, 121); 
+}
+
+#nav a {
+    font-size: 18px;
+    margin-left: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #f3e9e9;
+    text-align: center;
+    color: rgb(236, 226, 226);
+}
+
+
+/* MAIN STYLES */
+#main {
+    margin-top: 300px; 
+    text-align: center;
+    color: rgb(12, 0, 0);
+    flex: 1;
+}
+
+/* Contenedor del menú (bandeja de entrada)*/
+/* RESET STYLES */
+
+
+ul {
+    list-style: none;
+}
+
+/* MENU CON GRID */
+.menu {
+    display: grid; /* Usamos grid para colocar los elementos en una columna */
+    grid-template-columns: 1fr; /* Una sola columna para que los elementos se apilen verticalmente */
+    width: 200px; /* Ancho del menú */
+    height: 50vh; /* Altura completa de la pantalla */
+    padding-top: 10px; /* Espacio superior */
+    color: rgb(187, 183, 183); /* Color de texto */
+    margin-top: -150px; /* Márgenes para alejar el menú del borde superior */
+}
+
+/* Estilo para los enlaces */
+.menu a {
+    text-decoration: none;
+    color: #cfcdcd; /* Color de texto */
+    padding: 20px;
+    text-align: center; /* Centra el texto */
+    background-color: #132446; /* Fondo para cada enlace */
+    border-radius: 4px; /* Bordes redondeados */
+    margin: 15px 0; /* Separación entre los enlaces */
+    transition: background-color 0.3s; /* Efecto suave para el hover */
+}
+
+/* Efecto hover */
+.menu a:hover {
+    background-color: #050404; /* Fondo más oscuro cuando se pasa el mouse */
+    color: #e7e0e0; /* Cambia el color del texto al pasar el mouse */
+}
+
+/* Estilos para el <span> si decides usarlo dentro de los enlaces */
+.menu a span {
+    display: inline-block;
+}
+
+/* Efecto hover */
+.menu span:hover {
+    background-color: #050404;
+}
+
+/* FOOTER (fondo de sitio) STYLES */
+#footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(18, 30, 63);
+    margin-top: 450px;
+}
+
+/* FOOTER NAVIGATION STYLES */
+.footerNav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  /* Centra los elementos dentro de la sección */
+    color: rgb(70, 68, 68);
+    font-size: 8px;
+    margin-bottom: 30px;
+    row-gap: 2px;
+    padding: 10px;  /* Añadimos algo de padding si es necesario */
+}
+
+footer li {
+    font-size: 15px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footerNav-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+
+.footerLogo img {
+    width: 95px; 
+    margin-left: 40px;   
+}
+
+.menu a {
+    text-decoration: none;  /* Quita el subrayado de los enlaces */
+    padding: 0px 0; /* Agrega espacio alrededor del menú */
+}
+
+.menu span {
+    display: inline-block; /* Asegura que el span mantenga su formato de bloque en línea */
+    padding: 30px;
+    color: #cfcdcd;  /* Cambia el color del texto */
+}
+
+.menu a:hover span {
+    color: #b38a8a; /* Cambia el color al pasar el mouse por encima */
+}
+
+/* Estilo del icono de búsqueda en la mano derecha */
+.search-icon {
+    position: fixed; /* Fija el icono en la pantalla */
+    top: 60px; /* Distancia desde la parte superior */
+    right: 20px; /* Distancia desde la derecha */
+    width: 60px; /* Tamaño del fondo */
+    height: 60px; /* Tamaño del fondo */
+    background-color: #121e36;
+    border-radius: 50%; /* Hace que el fondo sea redondo */
+    display: flex;
+    justify-content: center; /* Centra el icono horizontalmente */
+    align-items: center; /* Centra el icono verticalmente */
+    transition: background-color 0.3s;
+    z-index: 1000; /* Asegura que el icono esté por encima de otros elementos */
+}
+
+.search-icon i {
+    font-size: 30px; /* Tamaño del icono */
+    color: #cfcdcd; /* Color del icono */
+}
+
+/* Efecto hover */
+.search-icon:hover {
+    background-color: #050404; /* Fondo más oscuro cuando el mouse pasa sobre el icono */
+}
+
+.search-icon:hover i {
+    color: #b38a8a; /* Cambia el color del icono cuando el mouse pasa sobre él */
+}
+
+/* Contenedor de las cámaras */
+.camaras-container {
+    display: flex;          /* Hace que los elementos hijos se alineen horizontalmente */
+    justify-content: space-between;  /* Distribuye las cámaras de manera equitativa */
+    gap: 20px;              /* Espacio entre cada cámara */
+    flex-wrap: wrap;        /* Permite que las cámaras se ajusten si hay poco espacio */
+}
+
+/* Estilo para cada cámara */
+.camara {
+    flex: 1;                /* Hace que cada cámara ocupe el mismo espacio */
+    max-width: 32%;         /* Máximo ancho para evitar que las cámaras se estiren demasiado */
+    text-align: center;     /* Centra el contenido dentro de cada cámara */
+}
+
+.camara video {
+    width: 100%;            /* Hace que el video ocupe todo el ancho disponible */
+    height: auto;           /* Mantiene la proporción del video */
+    border: 2px solid #ccc; /* Estilo opcional para el borde del video */
+    border-radius: 10px;    /* Bordes redondeados */
+}
+.user i {
+    margin-right: 10px; /* Espacio entre el ícono y el nombre */
+    color: #4CAF50; /* Puedes cambiar el color del ícono si lo deseas */
+}
+/* Estilo para el botón */
+.btn-crown {
+    background-color: #9c1d0c; /* Color dorado para el botón */
+    color: white;  /* Color blanco para el texto e ícono */
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición para el color de fondo */
+}
+
+/* Efecto de hover: aumentar tamaño */
+.btn-crown:hover {
+    transform: scale(1.1); /* Escala el botón un 10% más grande */
+    transition: transform 0.3s ease-in-out; /* Animación suave */
+    background-color: #050505; /* Color de fondo más oscuro al pasar el ratón */
+}
+
+/* Efecto de hover en el ícono */
+.btn-crown i {
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-crown:hover i {
+    transform: rotate(15deg); /* Gira el ícono de la corona */
+}
+/* Estilo para la sección de visitantes */
+.profile-visits {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-visits h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Contenedor de la lista de visitantes */
+.profile-visit-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo de cada entrada de visitante */
+.visit-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilo de la imagen del visitante */
+.visitor-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+    border: 2px solid #3498db;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del nombre de usuario */
+.visitor-name {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Efecto al pasar el mouse sobre la entrada del visitante */
+.visit-item:hover {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+/* Estilo para el contenedor de la bandeja de entrada */
+.bandeja-entrada {
+    display: flex; /* Para disponer los elementos en una fila */
+    justify-content: space-between; /* Espacio entre los elementos */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 20px; /* Espacio dentro del contenedor */
+    border: 2px solid #ddd; /* Borde alrededor del contenedor */
+    background-color: #f4f4f4; /* Fondo claro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Para evitar que el contenido se desborde */
+}
+
+/* Estilo para cada tarjeta */
+.card-values {
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 15px; /* Espacio interno */
+    width: 22%; /* Cada tarjeta ocupa un 22% del contenedor */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex;
+    flex-direction: column; /* Los contenidos dentro de la tarjeta van en columna */
+    align-items: center; /* Centra los contenidos */
+    justify-content: center; /* Centra los contenidos verticalmente */
+}
+
+/* Estilo de los iconos dentro de las tarjetas */
+.card-values__icon {
+    margin-bottom: 10px;
+}
+
+/* Estilo de la información dentro de las tarjetas */
+.card-values-info {
+    text-align: center;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .bandeja-entrada {
+        flex-direction: column; /* En pantallas pequeñas, los elementos se apilan en una columna */
+        align-items: center; /* Centra los elementos */
+        gap: 10px; /* Reduce el espacio entre los elementos */
+    }
+
+    .card-values {
+        width: 90%; /* Las tarjetas ocupan casi todo el ancho del contenedor */
+    }
+}
+
+.quick-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.btn-action {
+    padding: 12px 20px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-action:hover {
+    background-color: #2980b9;
+}
+
+#main {
+    margin-top: 100px;
+}
+
+
+
+
