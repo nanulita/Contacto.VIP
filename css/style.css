@@ -28,8 +28,8 @@
 }
 
 .contact-form button {
-    background-color: #007bff;
-    color: white;
+    background-color: #294461;
+    color: rgb(163, 144, 144);
     border: none;
     padding: 12px 20px;
     font-size: 16px;
@@ -38,7 +38,7 @@
 }
 
 .contact-form button:hover {
-    background-color: #0056b3;
+    background-color: #1056a1;
 }
 
 #main {
@@ -135,7 +135,7 @@ header {
     width: 200px;
     height: 50vh;
     padding-top: 10px;
-    color: rgb(196, 185, 185);
+    color: rgb(160, 154, 154);
     margin-top: -150px;
 }
 
@@ -152,7 +152,7 @@ header {
 
 .menu a:hover {
     background-color: #050404;
-    color: #e7e0e0;
+    color: #bbb1b1;
 }
 
 /* FOOTER STYLES */
@@ -278,7 +278,7 @@ footer li {
 }
 
 .user {
-    background-color: #f1f1f1;
+    background-color: #9c9393;
     padding: 8px 15px;
     margin: 5px 0;
     border-radius: 6px;
@@ -288,12 +288,12 @@ footer li {
 }
 
 .user:hover {
-    background-color: #e0e0e0;
+    background-color: #a39c9c;
 }
 
 .user.selected {
     background-color: #007bff;
-    color: white;
+    color: rgb(173, 169, 169);
 }
 
 .user i {
@@ -510,7 +510,7 @@ footer li {
 
 /* CARD VALUES STYLES */
 .card-values {
-    background-color: #fff;
+    background-color: #928c8c;
     border-radius: 10px;
     padding: 20px;
     width: 30%;
@@ -542,14 +542,14 @@ footer li {
     background-color: #3498db;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: rgb(223, 215, 215);
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .card-values .btn-action:hover {
-    background-color: #2980b9;
+    background-color: #2b74a5;
 }
 
 .card-values .card-info {
@@ -568,10 +568,10 @@ footer li {
 
 .btn-action {
     padding: 12px 20px;
-    background-color: #3498db;
+    background-color: #0e476b;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: rgb(247, 241, 241);
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
@@ -583,14 +583,14 @@ footer li {
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f5f5f8;
     color: #333;
     margin: 0;
 }
 
 /* Contenedor de Chat */
 .chat-container {
-    background-color: #fff;
+    background-color: #f5f0f0;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -608,7 +608,7 @@ body {
 }
 
 .chat-box p {
-    background-color: #e1f5fe;
+    background-color: #e5eaec;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -632,7 +632,7 @@ body {
 
 /* Zona de Usuarios */
 .users-container {
-    background-color: #fff;
+    background-color: #e7e4e4;
     padding: 0px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -672,7 +672,7 @@ body {
 /* Estilos del Footer */
 #footer {
     background-color: #212529;
-    color: #dbd4d4;
+    color: #e2d5d5;
     padding: 10px;
     text-align: center;
 }
@@ -693,7 +693,7 @@ body {
     padding: 0;
     display: flex;
     height: 100vh;
-    background-color: #f0f2f5;
+    background-color: #e7eaee;
 }
 
 .container {
@@ -704,7 +704,7 @@ body {
 /* Sidebar (Bandeja de entrada) */
 .sidebar {
     width: 250px;
-    background-color: #ffffff;
+    background-color: #e7dfdf;
     border-right: 2px solid #ddd;
     padding: 10px;
     box-sizing: border-box;
@@ -726,7 +726,7 @@ body {
 }
 
 .conversation:hover {
-    background-color: #f1f1f1;
+    background-color: #ccc9c9;
 }
 
 .conversation img {
@@ -805,7 +805,7 @@ body {
 
 .message.sent .text {
     background-color: #4CAF50;
-    color: white;
+    color: rgb(226, 223, 223);
 }
 
 .message.received .text {
@@ -823,7 +823,7 @@ body {
     width: 100%;
     padding: 10px;
     border-radius: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #f8f6f6;
     margin-right: 10px;
     font-size: 1em;
 }
@@ -831,7 +831,7 @@ body {
 .input-container button {
     padding: 10px 15px;
     background-color: #4CAF50;
-    color: white;
+    color: rgb(209, 201, 201);
     border: none;
     border-radius: 15px;
     cursor: pointer;
@@ -848,7 +848,7 @@ body {
     display: flex;
     flex-direction: column; /* Organiza los elementos de manera vertical */
     height: 100vh; /* Esto asegura que el body ocupe toda la altura de la pantalla */
-    background-color: #f0f2f5;
+    background-color: #254068;
 }
 
 .container {
