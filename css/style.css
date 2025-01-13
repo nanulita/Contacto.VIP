@@ -61,6 +61,7 @@ header {
     align-items: center;
     position: relative;
     background-color: rgb(36, 91, 136);
+    z-index: 999;
 }
 #navbarNav {
     display: flex;
@@ -966,4 +967,43 @@ body {
     margin-top: auto; /* Esto asegura que el footer se pegue al final */
 }
 
+/* Estilos para el formulario de contacto */
+.contact-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+#main {
+    margin-top: 100px;
+}
 
