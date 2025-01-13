@@ -6,7 +6,8 @@
 }
 
 ul {
-    display: flex; 
+    list-style: none;
+    display: flex;
 }
 
 li {
@@ -20,26 +21,11 @@ a {
 }
 
 /* BODY STYLES */
-
 body {
     background-color: #7a4545;
-    background-size: cover;  /* Hace que la imagen cubra todo el fondo */
-    background-position: center;  /* Centra la imagen */
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
-}
-
-#registerBox {
-    width: 100%;
-    height: auto;
-    max-width: 1400px; 
-    background-color: rgb(43, 85, 97);
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(54, 46, 46, 3);
-    margin-top: 100vh; /* Aumenta el margen superior para separarlo más del header */
-    margin-bottom: 20px;
-    padding: 10px;   
-    margin: 10px auto;
-    color: rgb(168, 184, 184);
 }
 
 /* HEADER STYLES */
@@ -47,8 +33,8 @@ body {
     width: 100%;
     background-size: cover;
     position: fixed;
-    top: 0; 
-    z-index: 1000; 
+    top: 0;
+    z-index: 1000;
 }
 
 header {
@@ -57,7 +43,7 @@ header {
     height: 50px;
 }
 
-.introHeader{
+.introHeader {
     background-color: rgb(8, 8, 8);
 }
 
@@ -67,15 +53,19 @@ header {
 }
 
 /* NAVIGATION STYLES */
-
 #nav {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     position: relative;
-    background-color: rgb(55, 90, 121); 
+    background-color: rgb(36, 91, 136);
+}
+#navbarNav {
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+    width: 100%;
 }
 
 #nav a {
@@ -83,71 +73,50 @@ header {
     margin-left: 15px;
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid #f3e9e9;
+    border: 1px solid #fff7f7;
     text-align: center;
-    color: rgb(236, 226, 226);
+    color: rgb(253, 245, 245);
 }
-
 
 /* MAIN STYLES */
 #main {
-    margin-top: 300px; 
+    margin-top: 400px;
     text-align: center;
-    color: rgb(12, 0, 0);
+    color: rgb(22, 19, 19);
     flex: 1;
 }
 
-/* Contenedor del menú (bandeja de entrada)*/
-/* RESET STYLES */
-
-
-ul {
-    list-style: none;
-}
-
-/* MENU CON GRID */
+/* MENU STYLES */
 .menu {
-    display: grid; /* Usamos grid para colocar los elementos en una columna */
-    grid-template-columns: 1fr; /* Una sola columna para que los elementos se apilen verticalmente */
-    width: 200px; /* Ancho del menú */
-    height: 50vh; /* Altura completa de la pantalla */
-    padding-top: 10px; /* Espacio superior */
-    color: rgb(187, 183, 183); /* Color de texto */
-    margin-top: -150px; /* Márgenes para alejar el menú del borde superior */
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 200px;
+    height: 50vh;
+    padding-top: 10px;
+    color: rgb(196, 185, 185);
+    margin-top: -150px;
 }
 
-/* Estilo para los enlaces */
 .menu a {
     text-decoration: none;
-    color: #cfcdcd; /* Color de texto */
+    color: #613e3e;
     padding: 20px;
-    text-align: center; /* Centra el texto */
-    background-color: #132446; /* Fondo para cada enlace */
-    border-radius: 4px; /* Bordes redondeados */
-    margin: 15px 0; /* Separación entre los enlaces */
-    transition: background-color 0.3s; /* Efecto suave para el hover */
+    text-align: center;
+    background-color: #132446;
+    border-radius: 4px;
+    margin: 15px 0;
+    transition: background-color 0.3s;
 }
 
-/* Efecto hover */
 .menu a:hover {
-    background-color: #050404; /* Fondo más oscuro cuando se pasa el mouse */
-    color: #e7e0e0; /* Cambia el color del texto al pasar el mouse */
-}
-
-/* Estilos para el <span> si decides usarlo dentro de los enlaces */
-.menu a span {
-    display: inline-block;
-}
-
-/* Efecto hover */
-.menu span:hover {
     background-color: #050404;
+    color: #e7e0e0;
 }
 
-/* FOOTER (fondo de sitio) STYLES */
+/* FOOTER STYLES */
 #footer {
     width: 100%;
-    height: 100px;
+    height: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -161,16 +130,16 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;  /* Centra los elementos dentro de la sección */
+    justify-content: center;
     color: rgb(70, 68, 68);
-    font-size: 8px;
-    margin-bottom: 30px;
+    font-size: 12px;
+    margin-bottom: 10px;
     row-gap: 2px;
-    padding: 10px;  /* Añadimos algo de padding si es necesario */
+    padding: 10px;
 }
 
 footer li {
-    font-size: 15px;
+    font-size: 14px;
     display: inline-block;
     margin-right: 20px;
 }
@@ -181,90 +150,119 @@ footer li {
     align-items: center;
     margin-top: 10px;
     width: 100%;
-    max-width: 300px;
+    max-width: 600px;
     margin: 0 auto;
+    font-size: 10px !important;
 }
-
 
 .footerLogo img {
-    width: 95px; 
-    margin-left: 40px;   
+    width: 95px;
+    margin-left: 40px;
 }
 
-.menu a {
-    text-decoration: none;  /* Quita el subrayado de los enlaces */
-    padding: 0px 0; /* Agrega espacio alrededor del menú */
-}
-
-.menu span {
-    display: inline-block; /* Asegura que el span mantenga su formato de bloque en línea */
-    padding: 30px;
-    color: #cfcdcd;  /* Cambia el color del texto */
-}
-
-.menu a:hover span {
-    color: #b38a8a; /* Cambia el color al pasar el mouse por encima */
-}
-
-/* Estilo del icono de búsqueda en la mano derecha */
+/* SEARCH ICON STYLES */
 .search-icon {
-    position: fixed; /* Fija el icono en la pantalla */
-    top: 60px; /* Distancia desde la parte superior */
-    right: 20px; /* Distancia desde la derecha */
-    width: 60px; /* Tamaño del fondo */
-    height: 60px; /* Tamaño del fondo */
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
     background-color: #121e36;
-    border-radius: 50%; /* Hace que el fondo sea redondo */
+    border-radius: 50%;
     display: flex;
-    justify-content: center; /* Centra el icono horizontalmente */
-    align-items: center; /* Centra el icono verticalmente */
+    justify-content: center;
+    align-items: center;
     transition: background-color 0.3s;
-    z-index: 1000; /* Asegura que el icono esté por encima de otros elementos */
+    z-index: 1000;
 }
 
 .search-icon i {
-    font-size: 30px; /* Tamaño del icono */
-    color: #cfcdcd; /* Color del icono */
+    font-size: 30px;
+    color: #cfcdcd;
 }
 
-/* Efecto hover */
 .search-icon:hover {
-    background-color: #050404; /* Fondo más oscuro cuando el mouse pasa sobre el icono */
+    background-color: #050404;
 }
 
 .search-icon:hover i {
-    color: #b38a8a; /* Cambia el color del icono cuando el mouse pasa sobre él */
+    color: #b38a8a;
 }
 
-/* Contenedor de las cámaras */
+/* CAMERAS CONTAINER STYLES */
 .camaras-container {
-    display: flex;          /* Hace que los elementos hijos se alineen horizontalmente */
-    justify-content: space-between;  /* Distribuye las cámaras de manera equitativa */
-    gap: 20px;              /* Espacio entre cada cámara */
-    flex-wrap: wrap;        /* Permite que las cámaras se ajusten si hay poco espacio */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* Estilo para cada cámara */
 .camara {
-    flex: 1;                /* Hace que cada cámara ocupe el mismo espacio */
-    max-width: 32%;         /* Máximo ancho para evitar que las cámaras se estiren demasiado */
-    text-align: center;     /* Centra el contenido dentro de cada cámara */
+    flex: 1;
+    max-width: 32%;
+    text-align: center;
+    margin-top: -200px;
 }
 
 .camara video {
-    width: 100%;            /* Hace que el video ocupe todo el ancho disponible */
-    height: auto;           /* Mantiene la proporción del video */
-    border: 2px solid #ccc; /* Estilo opcional para el borde del video */
-    border-radius: 10px;    /* Bordes redondeados */
+    width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
 }
+
+/* CHATBOX STYLES */
+#chatBox {
+    background: linear-gradient(45deg, #865050, hsl(255, 20%, 96%));
+    border-radius: 10px;
+    padding: 200px;
+    max-height: 100px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* USERS CONTAINER STYLES */
+.users-container {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    max-height: calc(100vh - 20% - 10px);
+    overflow-y: auto;
+}
+
+.user {
+    background-color: #f1f1f1;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.user:hover {
+    background-color: #e0e0e0;
+}
+
+.user.selected {
+    background-color: #007bff;
+    color: white;
+}
+
 .user i {
-    margin-right: 10px; /* Espacio entre el ícono y el nombre */
-    color: #4CAF50; /* Puedes cambiar el color del ícono si lo deseas */
+    margin-right: 10px;
+    color: #8d2734;
 }
-/* Estilo para el botón */
+
+/* BUTTON STYLES */
 .btn-crown {
-    background-color: #9c1d0c; /* Color dorado para el botón */
-    color: white;  /* Color blanco para el texto e ícono */
+    background-color: #9c1d0c;
+    color: rgb(109, 89, 89);
     border: none;
     padding: 12px 20px;
     font-size: 16px;
@@ -273,127 +271,254 @@ footer li {
     justify-content: center;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Transición para el color de fondo */
+    transition: background-color 0.3s ease;
 }
 
-/* Efecto de hover: aumentar tamaño */
 .btn-crown:hover {
-    transform: scale(1.1); /* Escala el botón un 10% más grande */
-    transition: transform 0.3s ease-in-out; /* Animación suave */
-    background-color: #050505; /* Color de fondo más oscuro al pasar el ratón */
+    transform: scale(1.1);
+    background-color: #050505;
 }
 
-/* Efecto de hover en el ícono */
 .btn-crown i {
     transition: transform 0.3s ease-in-out;
 }
 
 .btn-crown:hover i {
-    transform: rotate(15deg); /* Gira el ícono de la corona */
-}
-/* Estilo para la sección de visitantes */
-.profile-visits {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: rotate(15deg);
 }
 
-.profile-visits h4 {
-    font-size: 22px;
+
+/* Sección de perfiles */
+.profile-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    width: 100%; 
+}
+
+/* Estilo para los cuadros de perfil */
+.profile-visits,
+.recent-users {
+    background-color: #100f52;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilo específico para el cuadro de "Últimos Visitantes" */
+.profile-visits {
+    margin-top: 0;
+    padding: 20px 30px;
+    width: 100%;
+}
+
+/* Efecto al pasar el mouse */
+.profile-visits:hover,
+.recent-users:hover {
+    transform: scale(1.05);
+}
+
+/* Títulos dentro de los cuadros */
+.profile-visits h4,
+.recent-users h4 {
+    font-size: 24px;
     margin-bottom: 20px;
     color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
 }
 
-/* Contenedor de la lista de visitantes */
+/* Lista de visitantes */
 .profile-visit-list {
     list-style: none;
     padding: 0;
 }
 
-/* Estilo de cada entrada de visitante */
+/* Estilo de cada visitante */
 .visit-item {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
     font-size: 16px;
     color: #555;
-}
-
-/* Estilo de la imagen del visitante */
-.visitor-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 12px;
-    border: 2px solid #3498db;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo del nombre de usuario */
-.visitor-name {
-    font-weight: bold;
-    color: #333;
-    font-size: 16px;
-}
-
-/* Efecto al pasar el mouse sobre la entrada del visitante */
-.visit-item:hover {
-    background-color: #f0f0f0;
-    border-radius: 8px;
     transition: background-color 0.3s ease;
 }
-/* Estilo para el contenedor de la bandeja de entrada */
-.bandeja-entrada {
-    display: flex; /* Para disponer los elementos en una fila */
-    justify-content: space-between; /* Espacio entre los elementos */
-    gap: 20px; /* Espacio entre las tarjetas */
-    padding: 20px; /* Espacio dentro del contenedor */
-    border: 2px solid #ddd; /* Borde alrededor del contenedor */
-    background-color: #f4f4f4; /* Fondo claro */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    overflow: hidden; /* Para evitar que el contenido se desborde */
+
+/* Efecto hover en los visitantes */
+.visit-item:hover {
+    background-color: #583939;
+    border-radius: 8px;
 }
 
-/* Estilo para cada tarjeta */
-.card-values {
-    background-color: #fff; /* Fondo blanco */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 15px; /* Espacio interno */
-    width: 22%; /* Cada tarjeta ocupa un 22% del contenedor */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    display: flex;
-    flex-direction: column; /* Los contenidos dentro de la tarjeta van en columna */
-    align-items: center; /* Centra los contenidos */
-    justify-content: center; /* Centra los contenidos verticalmente */
+/* Avatar de los visitantes */
+.visitor-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #3498db;
 }
 
-/* Estilo de los iconos dentro de las tarjetas */
-.card-values__icon {
-    margin-bottom: 10px;
+/* Nombre del visitante */
+.visitor-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
 }
 
-/* Estilo de la información dentro de las tarjetas */
-.card-values-info {
-    text-align: center;
-}
-
-/* Media query para pantallas pequeñas */
+/* Media query para pantallas más pequeñas */
 @media (max-width: 768px) {
+    .profile-visits,
+    .recent-users {
+        width: 100%;
+        max-width: 100%;
+    }
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-visits h4,
+    .recent-users h4 {
+        font-size: 20px;
+    }
+}
+
+
+
+/* USER LIST STYLES */
+.user-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-items: center;
+}
+
+.user-item {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+}
+
+.user-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3498db;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.user-avatar:hover {
+    transform: scale(1.1);
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-visits,
+    .recent-users {
+        width: 90%;
+    }
+
+    .user-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .bandeja-entrada {
-        flex-direction: column; /* En pantallas pequeñas, los elementos se apilan en una columna */
-        align-items: center; /* Centra los elementos */
-        gap: 10px; /* Reduce el espacio entre los elementos */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .card-values {
-        width: 90%; /* Las tarjetas ocupan casi todo el ancho del contenedor */
+        width: 90%;
     }
 }
 
+/* BANDEJA DE ENTRADA STYLES */
+.bandeja-entrada {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    background-color: #834e4e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* CARD VALUES STYLES */
+.card-values {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-values:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(15, 15, 15, 0.2);
+}
+
+.card-values .card-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3498db;
+}
+
+.card-values .btn-action {
+    padding: 12px 20px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-values .btn-action:hover {
+    background-color: #2980b9;
+}
+
+.card-values .card-info {
+    font-size: 16px;
+    color: #555;
+    margin-top: 15px;
+}
+
+/* QUICK ACTION BUTTONS */
 .quick-actions {
     margin-top: 30px;
     display: flex;
@@ -415,11 +540,430 @@ footer li {
 .btn-action:hover {
     background-color: #2980b9;
 }
-
-#main {
-    margin-top: 100px;
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
 }
 
+/* Contenedor de Chat */
+.chat-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 80vh; /* Ajustamos para que ocupe el alto de la ventana */
+}
 
+/* Zona de mensajes */
+.chat-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Hace que el chat ocupe el espacio restante */
+    overflow-y: auto;
+}
+
+.chat-box p {
+    background-color: #e1f5fe;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Entrada de texto */
+.input-area {
+    display: flex;
+    align-items: center;
+}
+
+.input-area textarea {
+    width: 80%;
+    margin-right: 10px;
+}
+
+/* Botón de enviar */
+.input-area button {
+    width: 18%;
+}
+
+/* Zona de Usuarios */
+.users-container {
+    background-color: #fff;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los usuarios */
+.users-container .user-name {
+    font-weight: bold;
+}
+
+.users-container .status {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.users-container .green {
+    background-color: #4caf50;
+}
+
+.users-container .red {
+    background-color: #f44336;
+}
+
+.users-container .yellow {
+    background-color: #ffeb3b;
+}
+
+/* Opciones de acción */
+.actions button {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Estilos del Footer */
+#footer {
+    background-color: #212529;
+    color: #dbd4d4;
+    padding: 10px;
+    text-align: center;
+}
+
+.footerNav a {
+    color: #580a0a;
+    text-decoration: none;
+}
+
+.footerNav a:hover {
+    text-decoration: underline;
+}
+
+/* General styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+/* Sidebar (Bandeja de entrada) */
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    border-right: 2px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1.5em;
+    color: #4b4f56;
+}
+
+.conversation {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.conversation:hover {
+    background-color: #f1f1f1;
+}
+
+.conversation img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.conversation .name {
+    font-weight: bold;
+    color: #4b4f56;
+}
+
+.conversation .last-message {
+    color: #888;
+    font-size: 0.9em;
+}
+
+/* Main Chat */
+.chat {
+    flex: 1;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.chat-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-header .name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+.message {
+    margin-bottom: 15px;
+}
+
+.message.sent {
+    text-align: right;
+}
+
+.message.received {
+    text-align: left;
+}
+
+.message .text {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 60%;
+}
+
+.message.sent .text {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.message.received .text {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Message input */
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+.input-container button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: #45a049;
+}
+/* General styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos de manera vertical */
+    height: 100vh; /* Esto asegura que el body ocupe toda la altura de la pantalla */
+    background-color: #f0f2f5;
+}
+
+.container {
+    display: flex;
+    flex: 1; /* Permite que la zona de chat ocupe el espacio restante */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    border-right: 2px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Permite el scroll si hay muchas conversaciones */
+}
+
+.sidebar h2 {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1.5em;
+    color: #4b4f56;
+}
+
+.conversation {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.conversation:hover {
+    background-color: #f1f1f1;
+}
+
+.conversation img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.conversation .name {
+    font-weight: bold;
+    color: #4b4f56;
+}
+
+.conversation .last-message {
+    color: #888;
+    font-size: 0.9em;
+}
+
+/* Main Chat */
+.chat {
+    flex: 1;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.chat-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-header .name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+.message {
+    margin-bottom: 15px;
+}
+
+.message.sent {
+    text-align: right;
+}
+
+.message.received {
+    text-align: left;
+}
+
+.message .text {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 60%;
+}
+
+.message.sent .text {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.message.received .text {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Message input */
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+.input-container button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+.footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Esto asegura que el footer se pegue al final */
+}
 
 
