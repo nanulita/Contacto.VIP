@@ -105,7 +105,6 @@ header {
     z-index: 999;
 }
 #navbarNav {
-    display: flex;
     justify-content: center; /* Centra el contenido */
     width: 100%;
 }
