@@ -7,7 +7,7 @@
 
 /* Estilos para el formulario de contacto */
 .contact-form {
-    background-color: #fff;
+    background-color: #fdfbfb;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -96,14 +96,16 @@ header {
 /* NAVIGATION STYLES */
 #nav {
     width: 100%;
-    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: fixed;
     background-color: rgb(36, 91, 136);
     z-index: 999;
+    top: 0; /* Asegúrate de que el menú esté fijado en la parte superior */
+    margin-top: 0; /* Elimina el margen negativo */
 }
+
 #navbarNav {
     justify-content: center; /* Centra el contenido */
     width: 100%;
