@@ -157,6 +157,7 @@ header {
     color: #bbb1b1;
 }
 
+
 /* FOOTER STYLES */
 #footer {
     width: 100%;
@@ -504,7 +505,7 @@ footer li {
     gap: 30px;
     padding: 20px;
     border: 2px solid #ddd;
-    background-color: #834e4e;
+    background-color: #743a3a;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -779,6 +780,30 @@ body {
     color: #333;
 }
 
+/* Alineación del texto en el chat-box */
+#chatBox {
+    background-color: #f8f9fa;  /* Color de fondo para el chat */
+    padding: 15px;  /* Espaciado interno */
+    border-radius: 8px;  /* Bordes redondeados */
+    max-height: 400px;  /* Altura máxima */
+    overflow-y: scroll;  /* Hacer que el contenido se desplace si es necesario */
+    width: 100%;  /* Asegura que ocupe todo el ancho disponible */
+    box-sizing: border-box;  /* Asegura que el padding no afecte al ancho total */
+}
+
+/* Alineación de los mensajes */
+#chatBox p {
+    text-align: left;  
+    margin-bottom: 10px;
+    font-size: 12px;  
+}
+
+/* Estilos para el input */
+#messageInput {
+    width: 100%;  
+    margin-top: 0px;  
+}
+
 .messages {
     flex: 1;
     overflow-y: auto;
@@ -998,6 +1023,8 @@ body {
 .input-container button:hover {
     background-color: #45a049;
 }
+/* Animación para la carga de la página */
+
 
 /* Footer */
 .footer {
@@ -1007,3 +1034,4 @@ body {
     padding: 10px;
     margin-top: auto; /* Esto asegura que el footer se pegue al final */
 }
+
