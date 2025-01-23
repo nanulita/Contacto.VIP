@@ -63,6 +63,12 @@ a {
 
 /* BODY STYLES */
 body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;  /* Organiza los elementos de manera vertical */
+    height: 100vh;  /* Esto asegura que el body ocupe toda la altura de la pantalla */
     background-color: #7a4545;
     background-size: cover;
     background-position: center;
@@ -70,6 +76,7 @@ body {
 }
 
 /* HEADER STYLES */
+/* 1. HEADER STYLES */
 #header {
     width: 100%;
     background-size: cover;
@@ -84,17 +91,20 @@ header {
     height: 50px;
 }
 
-.introHeader {
-    background-color: rgb(8, 8, 8);
-    margin-top: 55px;
+
+/* 2. ESTILOS PARA EL FORMULARIO EN LA VISTA DE BANDEJA DE ENTRADA (email y contraseña) */
+#formLogin input,
+#formLogin textarea {
+    width: 50%; /* Ajusta el ancho de los inputs */
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-.headerLogo {
-    width: 85px;
-    height: auto;
-}
+/*MENU*/
 
-/* NAVIGATION STYLES */
+/* NAVIGATION STYLES (ANCHO DEL MENU) */
 #nav {
     width: 100%;
     display: flex;
@@ -105,11 +115,14 @@ header {
     z-index: 999;
     top: 0; /* Asegúrate de que el menú esté fijado en la parte superior */
     margin-top: 0; /* Elimina el margen negativo */
+    margin-bottom: 40px; /* Espacio debajo del menú */
 }
 
+/*MENU DE ENTRADA*/
 #navbarNav {
     justify-content: center; /* Centra el contenido */
     width: 100%;
+    margin-top: 10px;
 }
 
 #nav a {
@@ -122,12 +135,17 @@ header {
     color: rgb(253, 245, 245);
 }
 
+
 /* MAIN STYLES */
 #main {
-    margin-top: 400px;
+    flex-grow: 1; /* Esto permite que el contenido ocupe el espacio disponible */
+    margin-top: 120px;
     text-align: center;
     color: rgb(22, 19, 19);
-    flex: 1;
+    flex-grow: 1;  /* Esto permite que el contenido ocupe todo el espacio disponible */
+}
+section {
+    margin-top: 150px; /* Mueve todas las secciones hacia abajo */
 }
 
 /* MENU STYLES */
@@ -155,54 +173,6 @@ header {
 .menu a:hover {
     background-color: #050404;
     color: #bbb1b1;
-}
-
-
-/* FOOTER STYLES */
-#footer {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(18, 30, 63);
-    margin-top: 450px;
-}
-
-/* FOOTER NAVIGATION STYLES */
-.footerNav {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: rgb(70, 68, 68);
-    font-size: 12px;
-    margin-bottom: 10px;
-    row-gap: 2px;
-    padding: 10px;
-}
-
-footer li {
-    font-size: 14px;
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.footerNav-copy {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 10px !important;
-}
-
-.footerLogo img {
-    width: 95px;
-    margin-left: 40px;
 }
 
 /* SEARCH ICON STYLES */
@@ -233,6 +203,7 @@ footer li {
 .search-icon:hover i {
     color: #b38a8a;
 }
+/*MENU (CAMAS WEB)*/
 
 /* CAMERAS CONTAINER STYLES */
 .camaras-container {
@@ -246,7 +217,7 @@ footer li {
     flex: 1;
     max-width: 32%;
     text-align: center;
-    margin-top: -200px;
+    margin-top: -20px;
 }
 
 .camara video {
@@ -332,28 +303,16 @@ footer li {
     transform: rotate(15deg);
 }
 
-
-/* Sección de perfiles */
-.profile-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-    width: 100%; 
-}
+/* BANDEJA DE ENTRADA*/
 
 /* Estilo para los cuadros de perfil */
 .profile-visits,
 .recent-users {
-    background-color: #100f52;
     border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     width: 100%;
     max-width: 100%;
-    transition: transform 0.3s ease;
-    margin-top: 20px;
+    margin-top: -70px;
     box-sizing: border-box;
 }
 
@@ -370,15 +329,15 @@ footer li {
     transform: scale(1.05);
 }
 
-/* Títulos dentro de los cuadros */
+/* Títulos dentro de los cuadros ( COLOR DE TEXTO TITULOS)*/
 .profile-visits h4,
 .recent-users h4 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #333;
+    color: #bb2828b7;
     font-weight: bold;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 /* Lista de visitantes */
@@ -387,20 +346,25 @@ footer li {
     padding: 0;
 }
 
-/* Estilo de cada visitante */
+/* Estilo de cada visitante (UTIMOS VISITANTES) */
 .visit-item {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
     font-size: 16px;
-    color: #555;
+    color: #552525;
     transition: background-color 0.3s ease;
+    margin-right: 10px;  /* Espacio entre los botones */
+    margin-right: 10px;  /* Espacio entre los botones */
+    padding-left: 10px;  /* Asegura que haya espacio en el inicio */
+    padding-right: 10px; /* Asegura que haya espacio al final */
 }
 
 /* Efecto hover en los visitantes */
 .visit-item:hover {
-    background-color: #583939;
-    border-radius: 8px;
+    background-color: #0c0202;
+    border-radius: 10px;
+    transform: scaleX(1.2);  /* Hace que el elemento crezca horizontalmente */
 }
 
 /* Avatar de los visitantes */
@@ -417,7 +381,7 @@ footer li {
 .visitor-name {
     font-weight: bold;
     font-size: 16px;
-    color: #333;
+    color: #f5f0f0;
 }
 
 /* Media query para pantallas más pequeñas */
@@ -452,8 +416,8 @@ footer li {
 }
 
 .user-avatar {
-    width: 70px;
-    height: 70px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #3498db;
@@ -690,14 +654,6 @@ body {
 }
 
 /* General styles */
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    height: 100vh;
-    background-color: #e7eaee;
-}
 
 .container {
     display: flex;
@@ -869,12 +825,6 @@ body {
 }
 /* General styles */
 body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column; /* Organiza los elementos de manera vertical */
-    height: 100vh; /* Esto asegura que el body ocupe toda la altura de la pantalla */
     background-color: #254068;
 }
 
@@ -1033,5 +983,64 @@ body {
     text-align: center;
     padding: 10px;
     margin-top: auto; /* Esto asegura que el footer se pegue al final */
+}
+/* FOOTER STYLES */
+#footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(18, 30, 63);
+    margin-top: auto;
+
+}
+
+/* FOOTER NAVIGATION STYLES */
+.footerNav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(70, 68, 68);
+    font-size: 12px;
+    margin-bottom: 10px;
+    row-gap: 2px;
+    padding: 0px;
+}
+
+footer li {
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footerNav-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 10px ;
+}
+
+.footerLogo img {
+    width: 95px;
+    margin-left: 40px;
+}
+/*CENTRADO DE INICIO*/
+/* Asegúrate de que todos los campos tengan el mismo ancho */
+input.form-control, select.form-select, button.form-control {
+    width: 50%;
+    display: block;
+    margin: 0 auto;  /* Esto centra el botón horizontalmente */
+}
+/* Centrar solo el botón de ingresar */
+#btn-login {
+    display: block;
+    margin: 0 auto;  /* Esto centra el botón horizontalmente */
 }
 
