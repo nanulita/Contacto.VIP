@@ -67,12 +67,12 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;  
-    height: 100vh;  
+    flex-direction: column;    
     background-color: #7a4545;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    height: 100px;
 }
 
 /* HEADER STYLES */
@@ -332,7 +332,7 @@ header {
 .recent-users h4 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #bb2828b7;
+    color: #050000b7;
     font-weight: bold;
     text-align: center;
     margin-top: 20px;
@@ -342,6 +342,8 @@ header {
 .profile-visit-list {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Estilo de cada visitante (UTIMOS VISITANTES) */
@@ -362,7 +364,6 @@ header {
 .visit-item:hover {
     background-color: #0c0202;
     border-radius: 10px;
-    transform: scaleX(1.2); 
 }
 
 /* Avatar de los visitantes */
@@ -414,8 +415,8 @@ header {
 }
 
 .user-avatar {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #3498db;
@@ -466,16 +467,16 @@ header {
     justify-content: space-between;
     gap: 30px;
     padding: 20px;
-    border: 2px solid #ddd;
+    border: 2px solid #140101;
     background-color: #743a3a;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(14, 12, 12, 0.178);
     overflow: hidden;
 }
 
 /* CARD VALUES STYLES */
 .card-values {
-    background-color: #928c8c;
+    background-color: #faeeee;
     border-radius: 10px;
     padding: 20px;
     width: 30%;
@@ -507,7 +508,7 @@ header {
     background-color: #3498db;
     border: none;
     border-radius: 5px;
-    color: rgb(223, 215, 215);
+    color: rgb(20, 20, 20);
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -519,7 +520,7 @@ header {
 
 .card-values .card-info {
     font-size: 16px;
-    color: #555;
+    color: #504d4d;
     margin-top: 15px;
 }
 
@@ -531,12 +532,16 @@ header {
     justify-content: space-between;
 }
 
+.container.mt-5 {
+    padding-block: 10px;
+}
+
 .btn-action {
     padding: 12px 20px;
     background-color: #0e476b;
     border: none;
     border-radius: 5px;
-    color: rgb(247, 241, 241);
+    color: rgb(243, 233, 233);
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
@@ -547,7 +552,7 @@ header {
 }
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #f5f5f8;
     color: #333;
     margin: 0;
