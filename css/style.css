@@ -67,8 +67,8 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;  /* Organiza los elementos de manera vertical */
-    height: 100vh;  /* Esto asegura que el body ocupe toda la altura de la pantalla */
+    flex-direction: column;  
+    height: 100vh;  
     background-color: #7a4545;
     background-size: cover;
     background-position: center;
@@ -95,7 +95,7 @@ header {
 /* 2. ESTILOS PARA EL FORMULARIO EN LA VISTA DE BANDEJA DE ENTRADA (email y contraseña) */
 #formLogin input,
 #formLogin textarea {
-    width: 50%; /* Ajusta el ancho de los inputs */
+    width: 50%; 
     margin: 10px auto;
     padding: 10px;
     border-radius: 5px;
@@ -113,14 +113,14 @@ header {
     position: fixed;
     background-color: rgb(36, 91, 136);
     z-index: 999;
-    top: 0; /* Asegúrate de que el menú esté fijado en la parte superior */
-    margin-top: 0; /* Elimina el margen negativo */
-    margin-bottom: 40px; /* Espacio debajo del menú */
+    top: 0; /
+    margin-top: 0; 
+    margin-bottom: 40px; 
 }
 
 /*MENU DE ENTRADA*/
 #navbarNav {
-    justify-content: center; /* Centra el contenido */
+    justify-content: center; 
     width: 100%;
     margin-top: 10px;
 }
@@ -138,15 +138,13 @@ header {
 
 /* MAIN STYLES */
 #main {
-    flex-grow: 1; /* Esto permite que el contenido ocupe el espacio disponible */
+    flex-grow: 1; 
     margin-top: 120px;
     text-align: center;
     color: rgb(22, 19, 19);
-    flex-grow: 1;  /* Esto permite que el contenido ocupe todo el espacio disponible */
+    flex-grow: 1;  
 }
-section {
-    margin-top: 150px; /* Mueve todas las secciones hacia abajo */
-}
+
 
 /* MENU STYLES */
 .menu {
@@ -354,17 +352,17 @@ section {
     font-size: 16px;
     color: #552525;
     transition: background-color 0.3s ease;
-    margin-right: 10px;  /* Espacio entre los botones */
-    margin-right: 10px;  /* Espacio entre los botones */
-    padding-left: 10px;  /* Asegura que haya espacio en el inicio */
-    padding-right: 10px; /* Asegura que haya espacio al final */
+    margin-right: 10px;  
+    margin-right: 10px;  
+    padding-left: 10px;  
+    padding-right: 10px; 
 }
 
 /* Efecto hover en los visitantes */
 .visit-item:hover {
     background-color: #0c0202;
     border-radius: 10px;
-    transform: scaleX(1.2);  /* Hace que el elemento crezca horizontalmente */
+    transform: scaleX(1.2); 
 }
 
 /* Avatar de los visitantes */
@@ -563,14 +561,14 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    height: 80vh; /* Ajustamos para que ocupe el alto de la ventana */
+    height: 80vh; 
 }
 
 /* Zona de mensajes */
 .chat-box {
     margin-top: 20px;
     margin-bottom: 20px;
-    flex-grow: 1; /* Hace que el chat ocupe el espacio restante */
+    flex-grow: 1; 
     overflow-y: auto;
 }
 
@@ -738,13 +736,13 @@ body {
 
 /* Alineación del texto en el chat-box */
 #chatBox {
-    background-color: #f8f9fa;  /* Color de fondo para el chat */
-    padding: 15px;  /* Espaciado interno */
-    border-radius: 8px;  /* Bordes redondeados */
-    max-height: 400px;  /* Altura máxima */
-    overflow-y: scroll;  /* Hacer que el contenido se desplace si es necesario */
-    width: 100%;  /* Asegura que ocupe todo el ancho disponible */
-    box-sizing: border-box;  /* Asegura que el padding no afecte al ancho total */
+    background-color: #f8f9fa; 
+    padding: 15px;  
+    border-radius: 8px;  
+    max-height: 400px;  
+    overflow-y: scroll; 
+    width: 100%;  
+    box-sizing: border-box;  
 }
 
 /* Alineación de los mensajes */
@@ -830,7 +828,7 @@ body {
 
 .container {
     display: flex;
-    flex: 1; /* Permite que la zona de chat ocupe el espacio restante */
+    flex: 1; 
 }
 
 /* Sidebar */
@@ -840,7 +838,7 @@ body {
     border-right: 2px solid #ddd;
     padding: 10px;
     box-sizing: border-box;
-    overflow-y: auto; /* Permite el scroll si hay muchas conversaciones */
+    overflow-y: auto; 
 }
 
 .sidebar h2 {
@@ -982,7 +980,7 @@ body {
     color: white;
     text-align: center;
     padding: 10px;
-    margin-top: auto; /* Esto asegura que el footer se pegue al final */
+    margin-top: auto; /
 }
 /* FOOTER STYLES */
 #footer {
@@ -992,8 +990,6 @@ body {
     justify-content: space-around;
     align-items: center;
     background-color: rgb(18, 30, 63);
-    margin-top: auto;
-
 }
 
 /* FOOTER NAVIGATION STYLES */
@@ -1032,15 +1028,15 @@ footer li {
     margin-left: 40px;
 }
 /*CENTRADO DE INICIO*/
-/* Asegúrate de que todos los campos tengan el mismo ancho */
+
 input.form-control, select.form-select, button.form-control {
     width: 50%;
     display: block;
-    margin: 0 auto;  /* Esto centra el botón horizontalmente */
+    margin: 0 auto;  /
 }
 /* Centrar solo el botón de ingresar */
 #btn-login {
     display: block;
-    margin: 0 auto;  /* Esto centra el botón horizontalmente */
+    margin: 0 auto;  
 }
 
