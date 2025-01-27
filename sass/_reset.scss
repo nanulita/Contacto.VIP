@@ -1,0 +1,62 @@
+/* RESET STYLES */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para el formulario de contacto */
+.contact-form {
+    background-color: #fdfbfb;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    label {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: #294461;
+        color: rgb(163, 144, 144);
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: #1056a1;
+        }
+    }
+}
+
+#main {
+    margin-top: 100px;
+}
+
+/* Estilos para las listas y enlaces */
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-style: italic;
+    color: rgb(201, 189, 189);
+}

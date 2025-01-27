@@ -1,0 +1,32 @@
+$header-bg-color: #a32121;
+$input-border-color: #ccc;
+$border-radius: 5px;
+$padding: 10px;
+$input-width: 50%;
+
+/* HEADER STYLES */
+#header {
+    width: 100%;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    header {
+        text-align: center;
+        color: $header-bg-color;
+        height: 50px;
+    }
+}
+
+/* 2. ESTILOS PARA EL FORMULARIO EN LA VISTA DE BANDEJA DE ENTRADA (email y contraseña) */
+#formLogin {
+    input,
+    textarea {
+        width: $input-width;
+        margin: 10px auto;
+        padding: $padding;
+        border-radius: $border-radius;
+        border: 1px solid $input-border-color;
+    }
+}

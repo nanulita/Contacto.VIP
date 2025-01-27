@@ -1,0 +1,39 @@
+/* Variables */
+$primary-color: #132446;
+$hover-color: #050404;
+$text-color: #613e3e;
+$hover-text-color: #bbb1b1;
+$background-color: rgb(160, 154, 154);
+$menu-padding: 20px;
+$menu-border-radius: 4px;
+$menu-margin: 15px 0;
+$transition-duration: 0.3s;
+$grid-template-columns: 1fr;
+
+/* Menu Styles */
+.menu {
+    display: grid;
+    grid-template-columns: $grid-template-columns;
+    width: 200px;
+    height: 50vh;
+    padding-top: 10px;
+    color: $background-color;
+    margin-top: -150px;
+
+    a {
+        text-decoration: none;
+        color: $text-color;
+        padding: $menu-padding;
+        text-align: center;
+        background-color: $primary-color;
+        border-radius: $menu-border-radius;
+        margin: $menu-margin;
+        transition: background-color $transition-duration;
+
+        &:hover {
+            background-color: $hover-color;
+            color: $hover-text-color;
+        }
+    }
+}
+

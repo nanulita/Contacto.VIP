@@ -1,0 +1,76 @@
+$primary-footer-bg: #4CAF50;
+$secondary-footer-bg: rgb(18, 30, 63);
+$footer-text-color: white;
+$footer-nav-color: rgb(70, 68, 68);
+$footer-font-size: 12px;
+$footer-item-font-size: 14px;
+$footer-copy-font-size: 10px;
+$footer-logo-width: 95px;
+
+/* Footer */
+.footer {
+    background-color: $primary-footer-bg;
+    color: $footer-text-color;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+
+    #footer {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $secondary-footer-bg;
+
+        .footerNav {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: $footer-nav-color;
+            font-size: $footer-font-size;
+            margin-bottom: 10px;
+            row-gap: 2px;
+            padding: 0px;
+
+            li {
+                font-size: $footer-item-font-size;
+                display: inline-block;
+                margin-right: 20px;
+            }
+        }
+
+        .footerNav-copy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: $footer-copy-font-size;
+        }
+
+        .footerLogo {
+            img {
+                width: $footer-logo-width;
+                margin-left: 40px;
+            }
+        }
+    }
+}
+
+/* CENTRADO DE INICIO */
+input.form-control, select.form-select, button.form-control {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Centrar solo el botón de ingresar */
+#btn-login {
+    display: block;
+    margin: 0 auto;
+}

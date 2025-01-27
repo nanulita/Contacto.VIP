@@ -1,0 +1,37 @@
+$search-icon-bg: #121e36;
+$search-icon-hover-bg: #050404;
+$search-icon-hover-color: #b38a8a;
+$search-icon-color: #cfcdcd;
+$search-icon-size: 60px;
+$search-icon-font-size: 30px;
+$border-radius: 50%;
+$transition-speed: 0.3s;
+
+/* SEARCH ICON STYLES */
+.search-icon {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width: $search-icon-size;
+    height: $search-icon-size;
+    background-color: $search-icon-bg;
+    border-radius: $border-radius;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color $transition-speed;
+    z-index: 1000;
+
+    i {
+        font-size: $search-icon-font-size;
+        color: $search-icon-color;
+    }
+
+    &:hover {
+        background-color: $search-icon-hover-bg;
+
+        i {
+            color: $search-icon-hover-color;
+        }
+    }
+}

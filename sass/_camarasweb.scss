@@ -1,0 +1,108 @@
+$primary-color: #9c1d0c;
+$secondary-color: #865050;
+$highlight-color: #007bff;
+$hover-bg-color: #050505;
+$light-color: #9c9393;
+$border-color: #ccc;
+$border-radius: 10px;
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+/* MENU (CAMAS WEB) */
+
+/* CAMERAS CONTAINER STYLES */
+.camaras-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    .camara {
+        flex: 1;
+        max-width: 32%;
+        text-align: center;
+        margin-top: -20px;
+
+        video {
+            width: 100%;
+            height: auto;
+            border: 2px solid $border-color;
+            border-radius: $border-radius;
+        }
+    }
+}
+
+/* CHATBOX STYLES */
+#chatBox {
+    background: linear-gradient(45deg, $secondary-color, hsl(255, 20%, 96%));
+    border-radius: $border-radius;
+    padding: 200px;
+    max-height: 100px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px $shadow-color;
+}
+
+/* USERS CONTAINER STYLES */
+.users-container {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px $shadow-color;
+    width: 250px;
+    max-height: calc(100vh - 20% - 10px);
+    overflow-y: auto;
+
+    .user {
+        background-color: $light-color;
+        padding: 8px 15px;
+        margin: 5px 0;
+        border-radius: 6px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            background-color: lighten($light-color, 5%);
+        }
+
+        &.selected {
+            background-color: $highlight-color;
+            color: rgb(173, 169, 169);
+        }
+
+        i {
+            margin-right: 10px;
+            color: #8d2734;
+        }
+    }
+}
+
+/* BUTTON STYLES */
+.btn-crown {
+    background-color: $primary-color;
+    color: rgb(109, 89, 89);
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: $hover-bg-color;
+    }
+
+    i {
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: rotate(15deg);
+        }
+    }
+}
